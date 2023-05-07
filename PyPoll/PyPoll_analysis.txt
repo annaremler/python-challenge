@@ -1,6 +1,4 @@
-----------------------------------------------------------
-PyPoll Analysis
-----------------------------------------------------------
+PyPoll Analysis 
 Total Votes: 369711
 {'Charles Casper Stockham': {'votes': 85213, 'candidate': 'Charles Casper Stockham', 'percentage_vote': 23.04854332167558}, 'Diana DeGette': {'votes': 272892, 'candidate': 'Diana DeGette', 'percentage_vote': 73.81224794501652}, 'Raymon Anthony Doane': {'votes': 11606, 'candidate': 'Raymon Anthony Doane', 'percentage_vote': 3.1392087333079077}}
 Winner: Diana DeGette

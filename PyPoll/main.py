@@ -2,20 +2,19 @@
 import os 
 import csv
 
-# Part 1: PyBank
-## Pull CSV file "budget_data.csv" and set path
-pypoll_csv = os.path.join("Resources", "election_data.csv")
+# Part 1: PyPoll Analysis
+# Import CSV file
+PyPoll = os.path.join("Resources", "election_data.csv")
 
-## Open CSV as reader
-with open (pypoll_csv, newline="") as csvfile:
-    csvreader = csv.reader(csvfile)
-    csv_header = next(csvreader)
-
-## Create variables and lists
+# Variables and lists
 total_votes = 0
 result = {}
 
-## Calculating final results (am trying to streamline code now)        
+with open (PyPoll, newline="") as csvfile:
+    csvreader = csv.reader(csvfile)
+    csv_header = next(csvreader)
+
+# Calculating final results
     for row in csvreader:
         candidate = (row[2])
         total_votes = total_votes + 1
@@ -37,12 +36,13 @@ result = {}
     print(f"Total Votes:", total_votes)
     print(result)
     print(f"Winner:", candidate_winner)
+    
 
 # Export results to text file
-with open ("PyPoll_analysis.txt", "w") as text:
-    text.write("----------------------------------------------------------\n")
+with open ("PyPoll_analysis.txt", "w") as text:  
     text.write(f"PyPoll Analysis " + "\n")
-    text.write("----------------------------------------------------------\n\n")
+  
     text.write(f"Total Votes: " + str(total_votes) + "\n")
     text.write(str(result) + "\n")
     text.write(f"Winner: " + str(candidate_winner) + "\n")
+      
